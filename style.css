@@ -1,0 +1,996 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans&display=swap');
+
+:root {
+    --background: rgba(0, 214, 170, .85);
+}
+  
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden!important;
+    font-family: "Montserrat", "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #00313C;
+    overflow-x: hidden!important;
+}
+
+/* -------------------- Formatiranje teksta -------------------- */
+
+.textWrapper > .naslov {
+    font-size: .9em;
+    text-transform: uppercase;
+    color: #40A6CD;
+    margin: 0 0 6px;
+    padding: 0;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.textWrapper > h1 {
+    font-size: 2.5em;
+    line-height: 1em;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.textWrapper > h2 {
+    font-size: 1.7em;
+    font-weight: 100;
+    margin: 0 0 8px;
+}
+
+.textWrapper > p {
+    font-size: .95em;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.textWrapperDesni {
+    text-align: right;
+    grid-column: -3 / -7;
+    grid-row: 2;
+}
+
+.textWrapperLijevi {
+    grid-column: 3 / 7;
+    grid-row: 2;
+}
+
+/* -------------------- Header -------------------- */
+
+/* -------------------- Meni -------------------- */
+
+header {
+    display: grid;
+    grid-template-columns: 80px repeat(10, 1fr) 80px;
+    grid-gap: 10px;
+    background: #fff;
+    text-align: center;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 70px;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.15);
+    box-shadow: 0p 3px 3px 0 rgba(0,0,0,0.15);
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    transition: height .5s;
+}
+
+.headerScrolled {
+    height: 60px !important;
+}
+  
+.nav-toggle {
+    display: none;
+}
+  
+#logotip {
+    grid-column: 3 / 4;
+    align-self: center;
+    justify-self: self-start;
+}
+
+.logo {
+    width: 120px;
+}
+  
+nav {
+    all: unset;
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    grid-column: 4 / -3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+  
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+  
+nav li {
+    margin-left: 2em;
+    margin-bottom: 0;
+}
+    
+nav a {
+    opacity: 1;
+    position: relative;
+    color: #00313C;
+    text-decoration: none;
+    font-size: .8em;
+    font-weight: 500;
+    transition: opacity 150ms ease-in-out;
+    white-space: nowrap;
+}
+
+nav a:hover{
+    color: #40A6CD;
+}
+
+#meniDugme {
+    background: #51A2DA;
+    width: 6em;
+    height: 2em;
+    padding: 11px 19px;
+    border-radius: 50px;
+    color: #fff;
+}
+
+#meniDugme:hover {
+    background: none;
+    border: 2px #000 solid;
+    border-radius: 50px;
+    color: black;
+    padding: 9px 17px;
+}
+
+/* -------------------- Početna (sekcija 1) -------------------- */
+
+.početna {
+    height: fit-content;
+    width: 100%;
+    background: #F9F7FD;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 90px calc(1rem + 10vh) min-content 40vh / 80px repeat(10, 1fr) 80px;
+}
+
+.textWrapperPočetna {
+    text-align: center;
+    grid-column: 3 / -3;
+    grid-row: 3 / 4;
+    justify-content: center;
+}
+
+.textWrapperPočetna h1 {
+    font-weight: 700;
+}
+
+.scrollWrap {
+    grid-column: 6 / 8;
+    grid-row: 4;
+    align-self: end;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    line-height: 25px;
+    align-items: center;
+    padding-bottom: 2.5em;
+}
+
+.scrollText {
+    font-size: .75em;
+    font-weight: 500;
+}
+
+#skrolStrelica {
+    color: #00313C;
+    
+    font-size: 1.4em;
+    text-decoration: none;
+    animation: puls 2.2s infinite;
+}
+
+@keyframes puls {
+    0%, 60%, 100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    80% {
+        transform: translate3d(0px, 2px, 0px);
+    }
+    70%, 90% {
+    transform: translate3d(0px, 7px, 0px);
+    }
+}
+
+/* -------------------- 3D animacija (sekcija 2) -------------------- */
+
+.animacija {
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: calc(12vh - 2vmin) min-content calc(12vh - 2vmin) / 80px repeat(10, 1fr) 80px;
+}
+
+/* -------------------- Virtualna realnost (sekcija 3) -------------------- */
+
+.virtualnaRealnost {
+    background: #F9F7FD;
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: calc(17vh - 2vmin) min-content calc(17vh - 2vmin) / 80px repeat(10, 1fr) 80px;
+    clip-path: polygon(0 0, 75% 8%, 100% 0, 100% 92%, 25% 100%, 0 92%);
+}
+
+/* -------------------- 3D modelovanje (sekcija 4) -------------------- */
+
+.modelovanje {
+    height: fit-content;
+    width: 100%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: calc(12vh - 2vmin) min-content calc(12vh - 2vmin) / 80px repeat(10, 1fr) 80px;
+}
+
+/* -------------------- O nama -------------------- */
+
+.O_nama {
+    height: auto;
+    display: grid;
+    grid-template: 60px min-content / 80px repeat(10, 1fr) 80px;
+    grid-gap: 10px;
+}
+
+#textWrapperO_nama {
+    text-align: center;
+    grid-column: 3 / -3;
+    grid-row: 2;
+}
+
+/* -------------------- Portfolio/Showcase -------------------- */
+
+#portfolio {
+    height: min-content;
+    display: grid;
+    grid-template: 50px repeat(2, 30vh) 10vh / 80px 1fr 10px repeat(8, 1fr) 10px 1fr 80px;
+}
+  
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.gallery__img:hover {
+    opacity: 0.7;
+}
+
+.gallery__item {
+    padding: 0;
+    margin: 0;
+}
+  
+.gallery__item--1 {
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+}
+  
+.gallery__item--2 {
+    grid-column: 6 / 8;
+    grid-row: 2 / 3;
+}
+  
+  .gallery__item--3 {
+    grid-column: 8 / 10;
+    grid-row: 2 / 3;
+}
+  
+.gallery__item--4 {
+    grid-column: 10 / 12;
+    grid-row: 2 / 3;
+}
+  
+.gallery__item--5 {
+    grid-column: 4 / 6;
+    grid-row: 3 / 4;
+}
+  
+.gallery__item--6 {
+    grid-column: 6 / 8;
+    grid-row: 3 / 4;
+}
+  
+.gallery__item--7 {
+    grid-column: 8 / 10;
+    grid-row: 3 / 4;
+}
+  
+.gallery__item--8 {
+    grid-column: 10 / 12;
+    grid-row: 3 / 4;
+}
+
+/* -------------------- Futer/Kontakt -------------------- */
+
+.futer {
+    height: 100%;
+    width: 100%;
+    background: #304857;
+    display: grid;
+    grid-gap: 10px;
+    grid-template: 70px .7fr 8vh min-content 8vh 6vh / 80px repeat(10, 1fr) 80px;
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 100%);
+}
+
+#textWrapperKontakt {
+    grid-column: 2 / -2;
+    grid-row: 2;
+    text-align: center;
+}
+
+#textWrapperKontakt > h1 {
+    color: #fff;
+    margin-top: 0;
+}
+
+#textWrapperKontakt > p {
+    color: #fff;
+    margin: 16px 0;
+}
+
+.fNavNaslov {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: .9em;
+    letter-spacing: 1px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/* -------------------- Navigacija 1 (futer) -------------------- */
+
+.futerNav1 {
+    grid-column: 3;
+    grid-row: 4;
+}
+
+.futerMeni1 > li > a {
+    text-decoration: none;
+    color: #fff;
+    font-size: .75em;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 1.5px;
+    line-height: 2.45em;
+}
+
+.futerMeni1, li {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------- Navigacija 2 (futer) -------------------- */
+
+.futerNav2 {
+    grid-column: 5 / 7;
+    grid-row: 4;
+}
+
+.company-menu:hover {
+    opacity: .6;
+}
+
+.fab {
+    padding-right: 7px;
+    font-size: calc(.8em + .6vw);
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    opacity: 1;
+    transition: .1s ease-in;
+}
+
+.fab:hover {
+    opacity: .6;
+}
+
+/* -------------------- Kontakt forma (futer) -------------------- */
+
+.kontaktForma {
+    grid-column: 8 / -3;
+    grid-row: 4;
+    margin-top: -1em;
+}
+
+.linija {
+    position: relative;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    width: 100%;
+    line-height: calc(2.5em + 3vmin);
+    padding: 0 20px 0 0;
+    resize: none;
+    color: #fff;
+    font-weight: 400;
+    padding-bottom: 1px;
+}
+
+.inputContainer {
+    position: relative;
+}
+
+.linija:focus ~ .pseudoPh,
+.linija:not(:focus):valid ~ .pseudoPh {
+    top: 5px;
+    bottom: 10px;
+    left: 10px;
+    font-size: .65em;
+    color: #51A2DA;
+}
+
+.pseudoPh {
+    position: absolute;
+    pointer-events: none;
+    font-size: .85em;
+    color: #fff;
+    left: 10px;
+    top: 22px;
+    transition: .4s ease all;
+}
+
+.kontaktDugme {
+    background-color:#40A6CD;
+    border: none;
+    color: #fff;
+    font-size: .85em;
+    border-radius: 50px;
+    width: 6.5em;   
+    margin-top: .8em;
+    padding: 11px 19px;
+    cursor: pointer;
+    /*text-transform: uppercase;*/
+    letter-spacing: 1.5px;
+}
+
+.kontaktDugme:hover {
+    background-color: #f5f5f5;
+    color: #40A6CD;
+}
+
+.logoFuter {
+    grid-column: 3 / 5;
+    grid-row: 4;
+    align-self: end;
+    width: 9em;
+}
+
+.separator {
+    opacity: .5;
+    grid-column: 2 / -2;
+    grid-row: 6;
+    border-top: lightgray .1px solid;
+}
+
+.copyContainer {
+    display: flex;
+    align-items: center;
+    grid-column: 2 / -2;
+    grid-row: 6;
+}
+
+.copyright {
+    color: white;
+    opacity: .7;
+    font-size: .79em;
+    font-weight: 200;
+}
+
+.politikaPrivatnosti {
+    margin-left: auto;
+    color: white;
+    opacity: .7;
+    text-decoration: none;
+    font-size: .79em;
+    transition: .2s ease-in;
+}
+
+.politikaPrivatnosti:hover {
+    opacity: 1;
+    color: white;
+}
+
+/* -------------------- Media query 950px -------------------- */
+
+@media screen and (max-width: 950px) {
+
+/* -------------------- Portfolio/Showcase -------------------- */
+
+    #portfolio {
+        grid-template: auto repeat(3, 30vh) auto / 80px 1fr 10px repeat(8, 1fr) 10px 1fr 80px;
+    }    
+
+    .gallery__item--1 {
+        grid-column: 4 / 8;
+        grid-row: 2 / 3;
+    }
+      
+    .gallery__item--2 {
+        grid-column: 8 / 12;
+        grid-row: 2 / 3;
+    }
+      
+      .gallery__item--3 {
+        grid-column: 4 / 8;
+        grid-row: 3 / 4;
+    }
+      
+    .gallery__item--4 {
+        grid-column: 8 / 12;
+        grid-row: 3 / 4;
+    }
+      
+    .gallery__item--5 {
+        grid-column: 4 / 8;
+        grid-row: 4 / 5;
+    }
+      
+    .gallery__item--6 {
+        grid-column: 8 / 12;
+        grid-row: 4 / 5;
+    }
+      
+    .gallery__item--7 {
+        display: none;
+    }
+      
+    .gallery__item--8 {
+        display: none;
+    }
+
+}
+
+/* -------------------- Media query 930px -------------------- */
+
+/* -------------------- Meni -------------------- */
+
+@media screen and (max-width: 930px) {
+
+    nav li {
+        margin-left: 1.3em;
+    }
+        
+    nav a {
+        font-size: .9em;
+    }
+}
+
+/* -------------------- Media query 850px -------------------- */
+
+@media screen and (max-width: 860px) {
+
+/* -------------------- Meni -------------------- */
+
+    header {
+        display: grid;
+        grid-template-columns: 50px auto 1fr auto 50px;
+    }
+
+    #logotip {
+        grid-column: 2 / 3;
+    }
+
+    .nav-toggle {
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+    }
+  
+    .nav-toggle:focus ~ .nav-toggle-label {
+        outline: 3px solid rgba(lightblue, .75);
+    }
+  
+    .nav-toggle-label {
+        grid-column: 4 / 5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .crtaWrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .crta {
+        width: 20px;
+        height: 2px;
+        background: #000;
+        margin: 0 0 4px;
+        transition: .2s;
+        transform-origin: center;
+    }
+
+    .crtaPrvaRot {
+        transform: translateY(6px) rotate(135deg);
+    }
+
+    .crtaDrugaSlajd {
+        opacity: 0;
+        transition: .2s;
+        width: 0;
+        transform: translate3d(-2px, 0px, 0px);
+    }
+
+    .crtaTrećaRot {
+        transform: translateY(-6px) rotate(-135deg);
+    }
+  
+    nav {
+        position: absolute;
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 100%;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+        -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.15);
+        -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.15);
+        box-shadow: 0p 3px 3px 0 rgba(0,0,0,0.15);
+    }
+  
+    nav ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+  
+    nav li {
+        margin-bottom: 1em;
+        margin-left: 1em;
+    }
+
+    nav li:last-child {
+        margin-top: 1.5em;
+        margin-bottom: 3em;
+    }
+  
+    nav a:hover {
+        color: #000;
+    }
+  
+    .nav-toggle:checked ~ nav {
+        transform: scale(1,1);
+    }
+  
+    .nav-toggle:checked ~ nav a {
+        opacity: 1;
+        transition: opacity 250ms ease-in-out 250ms;
+    }
+}
+
+/* -------------------- Media query 768px -------------------- */
+
+@media screen and (max-width: 768px) {
+
+/* -------------------- Formatiranje teksta -------------------- */
+
+    .textWrapperDesni {
+        text-align: right;
+        grid-column: 2 / -2;
+        grid-row: 2;
+    }
+
+    .textWrapperLijevi {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+/* -------------------- Početna (sekcija 1) -------------------- */
+
+    .početna {
+        display: grid;
+        grid-template: 20vh min-content 10vh min-content / 50px 1fr 50px;
+        height: 100%;
+        width: 100%;
+    }
+    .textWrapperPočetna {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    .scrollWrap {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+/* -------------------- Animacija (sekcija 2) -------------------- */
+
+    .animacija {
+        text-align: center;
+        grid-template: 55px min-content 45px / 50px 1fr 50px;
+    }
+
+/* -------------------- Virtualna realnost (sekcija 3) -------------------- */
+
+    .virtualnaRealnost {
+        text-align: center;
+        grid-template: 90px min-content 80px / 50px 1fr 50px;
+    }
+
+    #textWrapperVr {
+        text-align: center;
+    }
+/* -------------------- Modelovanje (sekcija 4) -------------------- */
+
+    .modelovanje {
+        text-align: center;
+        grid-template: 60px min-content 50px / 50px 1fr 50px;
+    }
+
+/* -------------------- O nama -------------------- */
+
+    .O_nama {
+        grid-template: 70px min-content 10vh / 50px 1fr 50px;
+        
+    }
+
+    #textWrapperO_nama {
+        grid-column: 2 / -2;
+        grid-row: 2;
+    }
+
+    /* -------------------- Portfolio/Showcase -------------------- */
+
+    #portfolio {
+        grid-template: auto repeat(3, 30vh) auto / 50px 10px repeat(2, 1fr) 10px 50px;
+    }    
+
+    .gallery__item--1 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+    
+    .gallery__item--2 {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+    
+    .gallery__item--3 {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+    }
+    
+    .gallery__item--4 {
+        grid-column: 4 / 5;
+        grid-row: 3 / 4;
+    }
+    
+    .gallery__item--5 {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+    }
+    
+    .gallery__item--6 {
+        grid-column: 4 / 5;
+        grid-row: 4 / 5;
+    }
+
+/* -------------------- Futer/Kontakt (sekcija 5) -------------------- */
+
+    .futer {
+        text-align: center;
+        grid-template: 70px min-content auto auto 10vh / 50px .5fr .5fr 50px;
+    }
+
+    #textWrapperKontakt {
+        grid-column: 2 / -2;
+        grid-row: 2;
+        margin: 14px 0 28px 0;
+    }
+
+    .futerNav1 {
+        text-align: left;
+        grid-column: 2 / 3;
+        grid-row: 3;
+        padding-bottom: 28px;
+    }
+
+    .futerNav2 {
+        text-align: left;
+        grid-column: 3 / 4;
+        grid-row: 3;
+        padding-bottom: 28px;
+    }
+
+    .kontaktForma {
+        grid-column: 2 / -2;
+        grid-row: 4;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kontaktDugme {
+        margin: 1.5em 0;
+        align-items: flex-start;
+    }
+
+    .logoFuter {
+        grid-column: 2 / -2;
+        grid-row: 5;
+    }
+}
+
+/* -------------------- Media query 480px -------------------- */
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 75px;
+        display: grid;
+        grid-template-columns: 30px auto 1fr auto 30px;
+    }
+
+    headerScrolled {
+        height: 60px !important;
+    }
+
+/* -------------------- Početna (sekcija 1) -------------------- */
+
+    .početna {
+        display: grid;
+        grid-template: 15vh min-content 6vh auto / 30px 1fr 30px;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .textWrapperPočetna h1 {
+        line-height: 1.1em;
+    }
+
+/* -------------------- Virtualna realnost (sekcija 2) -------------------- */
+
+    .animacija {
+        display: grid;
+        grid-template: 6vh min-content 4vh / 30px 1fr 30px;
+        height: fit-content;
+        width: 100%;
+    }
+
+/* -------------------- Animacija (sekcija 3) -------------------- */    
+
+    .virtualnaRealnost {
+        display: grid;
+        grid-template: 11vh min-content 9vh / 30px 1fr 30px;
+        height: fit-content;
+        width: 100%;
+    }
+/* -------------------- Modelovanje (sekcija 3) -------------------- */
+
+    .modelovanje {
+        display: grid;
+        grid-template: 5vh min-content 30px / 30px 1fr 30px;
+        height: fit-content;
+        width: 100%;
+    }
+
+/* -------------------- O nama -------------------- */
+
+    .O_nama {
+        grid-template: 40px min-content 45px / 30px 1fr 30px;
+    }
+
+/* -------------------- Portfolio/Showcase -------------------- */
+
+    #portfolio {
+        grid-template: auto repeat(3, 30vh) 55px / 1fr 20px 1fr; /*30px 10px repeat(2, 1fr) 10px 30px*/
+        grid-gap: 10px; 
+    }
+
+    .left__img {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .right__img {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .gallery__item--1 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    .gallery__item--2 {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+    }
+    
+    .gallery__item--3 {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+    
+    .gallery__item--4 {
+        grid-column: 3 / 4;
+        grid-row: 3 / 4;
+    }
+    
+    .gallery__item--5 {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+    
+    .gallery__item--6 {
+        grid-column: 3 / 4;
+        grid-row: 4 / 5;
+    }
+
+
+
+/* -------------------- Futer/Kontakt (sekcija 5) -------------------- */
+
+    .futer {
+        text-align: center;
+        grid-template: 50px min-content auto auto auto 10vh / 30px 1fr 30px;
+    }
+
+    .futerNav1 {
+        text-align: left;
+        grid-column: 2 / -2;
+        grid-row: 3;
+    }
+
+    .futerNav2 {
+        text-align: left;
+        grid-column: 2 / -2;
+        grid-row: 4;
+    }
+
+    .kontaktForma {
+        grid-column: 2 / -2;
+        grid-row: 5;
+    }
+
+    .kontaktDugme {
+        margin: 1.5em 0;
+        width: 100%;
+    }
+
+    .logoFuter {
+        grid-row: 4;
+        justify-self: end;
+        align-self: start;
+    }
+
+}

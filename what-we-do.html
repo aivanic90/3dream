@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <title>3Dream - 3D Animation and Product Visualization Studio</title>
+</head>
+
+<body>
+
+    <!-- Meni -->
+
+    <header id="header">
+        <a id="logotip" href="what-we-do.html"><img class="logo" src="Logo/logoCrveni.svg"></a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+            <ul>
+                <li><a class="hover" href="what-we-do.html">WHAT WE DO</a></li>
+                <li><a class="hover" href="who-we-are.html">WHO WE ARE</a></li>
+            </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="crtaWrap">
+                <span class="crta crtaPrva"></span>
+                <span class="crta crtaDruga"></span>
+                <span class="crta crtaTreća"></span>
+            </span>
+        </label>
+    </header>
+
+    <!-- Početna (sekcija 1) -->
+
+    <main class="početna">
+        <section class="textWrapper textWrapperPočetna">
+            <p class="naslov">Welcome to the 3Dream Studio</p>
+            <h1>Elevate your marketing performance, grow your business with our clever 3D solutions</h1>
+            <h2>Imagine Reality!</h2>
+        </section>
+
+        <!-- Dugme scroll down -->
+
+        <div class="scrollWrap">
+            <span class="scrollText">Learn more</span>
+            <a href="#3Danimacija" id="skrolStrelica" class="fas fa-chevron-down"></a>
+        </div>
+    </main>
+
+    <!-- 3D animacija (sekcija 2) -->
+
+    <article class="animacija" id="3Danimacija">
+        <img src="" alt="">
+        <section id="textWrapperAnimacija" class="textWrapper textWrapperLijevi">
+            <p class="naslov">3D and Visual Effects</p>
+            <h1>3D Animation</h1>
+            <p>People have always been mesmerized by the visual messages. Rise of the motion pictures made first visual
+                revolution, and now, driven by technology, we are ready for the second one.</p>
+            <p>By combining masterful artistry and the best storytelling imaginable with groundbreaking technology, we
+                try to preserve this
+                magic and take this approach one step further. Our team strives for the highest quality 3D animation and
+                visual effects to create striking advertising for clients and brands that will deliver the message that
+                will engage your audience.</p>
+        </section>
+    </article>
+
+    <!-- Virtualna realnost (sekcija 3) -->
+
+    <article class="virtualnaRealnost" id="VR">
+        <section id="textWrapperVr" class="textWrapper textWrapperDesni">
+            <p class="naslov">Immersive Technologies</p>
+            <h1>Virtual Reality</h1>
+            <p>Dedicated to the evolution of storytelling in the new era of digital interaction, we transform your
+                properties into living worlds you can explore.</p>
+            <p>Our studio works to combine cutting edge experimential
+                technology with creativity and forward thinking. Blurring the line between reality and imagination we
+                create exciting and rich virtual reality experience. Be the hero of your own adventure!</p>
+        </section>
+    </article>
+
+    <!-- Modelovanje (sekcija 4) -->
+
+    <article class="modelovanje" id="3Dmodelovanje">
+        <section id="textWrapperModelovanje" class="textWrapper textWrapperLijevi">
+            <p class="naslov">Presenting ideas in a unique way</p>
+            <h1>3D Visualization and Modeling</h1>
+            <p>Our goal is to enhance the way you comunicate, and turn information into engaging and insightful content
+                to improve audience interaction. We create clever 3D product visualizations, enterior, exterior and
+                furniture models that make it possible for you to show to your audience exactly how your products
+                function in their natural environment. Our visualizations are both impactful and engaging, with
+                interactive elements incorporated into the design that give a rich and unparalelled user experience.</p>
+        </section>
+    </article>
+
+    <!-- Futer (sekcija 6) -->
+
+    <footer class="futer">
+        <div id="textWrapperKontakt" class="textWrapper">
+            <h1>Contact</h1>
+            <p>Interested in finding out more? Why not take the conversation further?</br>Challenge us!</br>Let’s make
+                something amazing together!</p>
+        </div>
+
+        <!-- Navigacija 1 (futer) -->
+
+        <div class="futerNav1">
+            <h3 id="kompanija" class="fNavNaslov">Company</h3>
+            <ul class="futerMeni1">
+                <li><a href="O_nama.html" class="company-menu">About Us</a></li>
+                <li><a href="#" class="company-menu">Blog (soon)</a></li>
+            </ul>
+        </div>
+
+        <!-- Navigacija 2 (futer) -->
+
+        <div class="futerNav2">
+            <h3 id="pratiNas" class="fNavNaslov">Follow Us</h3>
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-twitter"></a>
+        </div>
+
+        <!-- Kontakt forma (futer) -->
+
+        <form action="" id="prijavnaForma" class="kontaktForma">
+            <div class="inputContainer">
+                <input class="linija" type="text" name="ime" required />
+                <span class="pseudoPh">Name</span>
+            </div>
+
+            <div class="inputContainer">
+                <input class="linija" type="text" name="email" required />
+                <span class="pseudoPh">E-mail</span>
+            </div>
+
+            <div class="inputContainer">
+                <textarea class="linija" name="poruka" rows="1" required></textarea>
+                <span class="pseudoPh">Message</span>
+            </div>
+
+            <input type="button" class="kontaktDugme" value="Submit" />
+        </form>
+
+        <!-- Copyright (futer) -->
+
+        <img class="logoFuter" src="Logo/logoBijeli.svg">
+
+        <div class="separator"></div>
+
+        <div class="copyContainer">
+            <p class="copyright">Copyright &copy; 2019 3Dream</p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
